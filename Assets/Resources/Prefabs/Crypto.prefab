@@ -121,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176679733961320605}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.358, y: 0, z: 1.071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6129071363819019753}
@@ -1736,7 +1736,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 180
-  m_StoppingDistance: 2.3
+  m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1758,6 +1758,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasLOS: 0
   player: {fileID: 0}
+  attackDistance: 5
+  playerBehaviour: {fileID: 0}
+  damageDelay: 1
+  isAttacking: 0
+  kickForce: 0.01
+  distanceToPlayer: 4
 --- !u!1 &6993734773108676367
 GameObject:
   m_ObjectHideFlags: 0
