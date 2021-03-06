@@ -26,6 +26,13 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource hitSound;
 
+    [Header("HealthBar")]
+    public HealthBarScreenSpaceController healthBar;
+
+    [Header("Player Abilities")] 
+    [Range(0,100)]
+    public int health=100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +79,16 @@ public class PlayerBehaviour : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
     }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        hitSound.Play();
+        healthBar.TakeDamage(damage);
+        if (health < 0)
+        {
+            health = 0;
+        }
+    }
 
-   
+
 }
